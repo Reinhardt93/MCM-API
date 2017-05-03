@@ -1,0 +1,49 @@
+//
+
+Databases
+campaignManager
+
+-- Schemas
+expiredCampaigns
+approvedCampaigns
+sentCampaigns
+shops
+users
+
+-- expiredCampaigns
+campaignID
+title
+image
+additionalText
+dateStarts
+dateEnds
+shopID
+
+-- approvedCampaigns
+campaignID
+title
+image
+additionalText
+dateStarts
+dateEnds
+shopID
+
+-- sentCampaigns
+campaignID
+title
+image
+additionalText
+dateStarts
+dateEnds
+shopID
+
+-- users
+userID
+username
+password
+userRole
+shopID
+
+-- shops
+shopID
+storeName

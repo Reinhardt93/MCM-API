@@ -5,9 +5,8 @@
 | Application Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register all of the routes for an application.
-| It is a breeze. Simply tell Lumen the URIs it should respond to
-| and give it the Closure to call when that URI is requested.
+| Registered Routes go here. Check Lumen documentation for routes if in
+| doubt on how to do any routes
 |
 */
 
@@ -34,4 +33,8 @@ $app->get('/shops/{id}', function($id) use ($app) {
 
 $app->get('/campaignProposals', function() use ($app) {
     return app('db')->select("SELECT * FROM sentCampaigns");
+});
+
+$app->get('/campaignProposals/{id}', function($id) use ($app) {
+    return app('db')->select("SELECT * FROM sentCampaigns WHERE campaignID = $id");
 });

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Shops extends Migration
+class CreateCategoryAdsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class Shops extends Migration
      */
     public function up()
     {
-      Schema::create('shops', function (Blueprint $table) {
-          $table->increments('shopID');
-          $table->string('shopName');
-          $table->timestamps();
+        Schema::create('shops', function (Blueprint $table) {
+            $table->increments('shopID');
+            $table->string('storeName');
+            $table->timestamps();
         });
     }
 

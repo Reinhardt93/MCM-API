@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ExpiredCampaigns extends Migration
+class CreateMoviesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class ExpiredCampaigns extends Migration
      */
     public function up()
     {
-      Schema::create('expiredCampaigns', function (Blueprint $table) {
-          $table->integer('campaignID')->primary();
+        Schema::create('activeCampaigns', function (Blueprint $table) {
+          $table->increments('campaignID');
           $table->string('title');
           $table->string('image');
-          $table->string('additionalText');
+          $table->string('description');
           $table->dateTime('dateStarts');
           $table->dateTime('dateEnds');
           $table->integer('shopID')->unsigned();
@@ -33,6 +33,6 @@ class ExpiredCampaigns extends Migration
      */
     public function down()
     {
-        Schema::drop('expiredCampaigns');
+        Schema::drop('activeCampaigns');
     }
 }

@@ -21,23 +21,7 @@ class ActiveCampaignController extends Controller
     /**
      * Get all data from item_ads
      */
-    public function index(Request $request)
-    {
-      $activeCampaigns = new activeCampaigns;
 
-      if($activeCampaigns !== null) {
-        $res['success'] = true;
-        $res['result'] = $activeCampaigns->all();
-
-        return $res;
-      } else {
-            $res['success'] = true;
-            $res['result'] = 'No campaign proposals';
-
-            return response($res);
-      }
-
-    }
 
     /**
      * Insert database for activeCampaigns

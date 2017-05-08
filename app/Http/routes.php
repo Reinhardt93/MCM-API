@@ -19,6 +19,12 @@ $app->get('/', function () use ($app) {
   return response($res);
 });
 
+$app->get('/test', function () use ($app) {
+  $res['success'] = true;
+  $res['result'] = "Hello there - this is a test";
+  return response($res);
+});
+
 $app->post('/login', 'LoginController@index');
 $app->post('/register', 'UserController@register');
 $app->get('/user/{id}', ['middleware' => 'auth', 'uses' =>  'UserController@get_user']);
@@ -46,7 +52,7 @@ $app->post('/sentcampaigns/update/{id}', 'SentCampaignController@update');
 
 
 /* Route sent campaigns */
-$app->get('/activecampaigns', 'ActiveCampaignController@index');
+$app->get('/campaigns', 'PublicCampaignController@index');
 $app->get('/activecampaigns/{id}', 'ActiveCampaignController@read');
 $app->get('/activecampaigns/delete/{id}', 'ActiveCampaignController@delete');
 $app->post('/activecampaigns/create', 'ActiveCampaignController@create');

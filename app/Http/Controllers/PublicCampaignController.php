@@ -33,4 +33,24 @@ class PublicCampaignController extends Controller
         return response($res);
       }
     }
+
+
+
+    public function read(Request $request, $id)
+    {
+      $activeCampaigns = activeCampaigns::find($id)->first();
+      if ($activeCampaigns !== null) {
+        $res['success'] = true;
+        $res['result'] = $activeCampaigns;
+
+        return response($res);
+      }else{
+        $res['success'] = false;
+        $res['result'] = 'Category not found!';
+
+        return response($res);
+      }
+    }
+
+    
 }

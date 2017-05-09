@@ -36,8 +36,8 @@ $app->get('/user/{id}', ['middleware' => 'auth', 'uses' =>  'UserController@get_
  */
 
 /* Route category ads */
-$app->get('/shops', 'ShopsController@index');
-$app->get('/shops/{id}', 'ShopsController@read');
+$app->get('/shops', 'PublicShopsController@index');
+$app->get('/shops/{id}', 'PublicShopsController@read');
 $app->get('/shops/delete/{id}', 'ShopsController@delete');
 $app->post('/shops', 'ShopsController@create');
 $app->post('/shops/update/{shopID}', 'ShopsController@update');
@@ -53,7 +53,7 @@ $app->post('/sentcampaigns/update/{id}', 'SentCampaignController@update');
 
 /* Route sent campaigns */
 $app->get('/campaigns', 'PublicCampaignController@index');
-$app->get('/activecampaigns/{id}', 'ActiveCampaignController@read');
+$app->get('/campaigns/{id}', 'PublicCampaignController@read');
 $app->get('/activecampaigns/delete/{id}', 'ActiveCampaignController@delete');
 $app->post('/activecampaigns/create', 'ActiveCampaignController@create');
 $app->post('/activecampaigns/update/{id}', 'ActiveCampaignController@update');

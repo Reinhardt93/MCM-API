@@ -15,7 +15,10 @@ class CreateCategoryAdsTable extends Migration
     {
         Schema::create('shops', function (Blueprint $table) {
             $table->increments('shopID');
-            $table->string('storeName');
+            $table->string('shopName');
+            $table->string('openingHours');
+            $table->integer('phoneNumber');
+            $table->string('shopImage');
             $table->timestamps();
         });
     }

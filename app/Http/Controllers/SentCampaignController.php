@@ -83,6 +83,15 @@ class SentCampaignController extends Controller
     }
 
     /**
+    * Move a campaign from sent to active campaigns by ID
+    * url : /sentcampaigns/activate/{id}
+    */
+    public function activate(Request $request, $id)
+    {
+      app('db')->statement("CALL sp_move_to_active($id)");
+    }
+
+    /**
      * Update data SentCampaigns by ud
      * Url : /item_ads/udpate/{id}
      */

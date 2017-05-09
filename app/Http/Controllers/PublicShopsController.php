@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Shops;
 
-class PublicShopController extends Controller
+class PublicShopsController extends Controller
 {
 
     /**

@@ -46,19 +46,20 @@ $app->post('/shops/update/{shopID}', 'ShopsController@update');
 /* Route sent campaigns */
 $app->get('/sentcampaigns', 'SentCampaignController@index');
 $app->get('/sentcampaigns/{id}', 'SentCampaignController@read');
+$app->get('/sentcampaigns/activate/{id}', 'SentCampaignController@activate');
 $app->get('/sentcampaigns/delete/{id}', 'SentCampaignController@delete');
 $app->post('/sentcampaigns/create', 'SentCampaignController@create');
 $app->post('/sentcampaigns/update/{id}', 'SentCampaignController@update');
 
 
-/* Route sent campaigns */
+/* Route for Active campaigns */
 $app->get('/campaigns', 'PublicCampaignController@index');
 $app->get('/campaigns/{id}', 'PublicCampaignController@read');
 $app->get('/activecampaigns/delete/{id}', 'ActiveCampaignController@delete');
 $app->post('/activecampaigns/create', 'ActiveCampaignController@create');
 $app->post('/activecampaigns/update/{id}', 'ActiveCampaignController@update');
 
-/* Route sent campaigns */
+/* Route for expired campaigns */
 $app->get('/expiredcampaigns', 'ExpiredCampaignController@index');
 $app->get('/expiredcampaigns/{id}', 'ExpiredCampaignController@read');
 $app->get('/expiredcampaigns/delete/{id}', 'ExpiredCampaignController@delete');

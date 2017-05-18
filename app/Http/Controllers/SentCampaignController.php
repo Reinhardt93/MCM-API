@@ -10,8 +10,6 @@ class SentCampaignController extends Controller
 
     /**
      * Create a new auth instance.
-     *
-     * @return void
      */
     public function __construct()
     {
@@ -19,7 +17,8 @@ class SentCampaignController extends Controller
     }
 
     /**
-     * Get all data from item_ads
+     * Get data for all proposed campaigns
+     * Url : /campaigns/proposal
      */
     public function index(Request $request)
     {
@@ -40,8 +39,8 @@ class SentCampaignController extends Controller
     }
 
     /**
-     * Insert database for SentCampaigns
-     * Url : /item_ads
+     * Insert database for sentCampaigns
+     * Url : /campaigns/proposal/create
      */
     public function create(Request $request)
     {
@@ -63,8 +62,8 @@ class SentCampaignController extends Controller
     }
 
     /**
-     * Get one data SentCampaigns by id
-     * Url : /item_ads/{id}
+     * Get one data from one proposed campaign by id
+     * Url : /campaigns/proposal/{id}
      */
     public function read(Request $request, $id)
     {
@@ -84,7 +83,7 @@ class SentCampaignController extends Controller
 
     /**
     * Move a campaign from sent to active campaigns by ID
-    * url : /sentcampaigns/activate/{id}
+    * url : /sentcampaigns/proposal/activate/{id}
     */
     public function activate(Request $request, $id)
     {
@@ -92,8 +91,8 @@ class SentCampaignController extends Controller
     }
 
     /**
-     * Update data SentCampaigns by ud
-     * Url : /item_ads/udpate/{id}
+     * Update data for one proposed campaign by id
+     * Url : /campaign/proposal/udpate/{id}
      */
     public function update(Request $request, $id)
     {
@@ -115,7 +114,8 @@ class SentCampaignController extends Controller
     }
 
     /**
-     * Delete data SentCampaigns by id
+     * Delete one proposed campaigns by id
+     * Url : /campaigns/proposal/delete/{id}
      */
     public function delete(Request $request, $id)
     {

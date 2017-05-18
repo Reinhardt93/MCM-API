@@ -10,8 +10,6 @@ class ExpiredCampaignController extends Controller
 
     /**
      * Create a new auth instance.
-     *
-     * @return void
      */
     public function __construct()
     {
@@ -19,7 +17,8 @@ class ExpiredCampaignController extends Controller
     }
 
     /**
-     * Get all data from item_ads
+     * Get data for all expired campaigns
+     * Url : /campaigns/expired
      */
     public function index(Request $request)
     {
@@ -41,7 +40,7 @@ class ExpiredCampaignController extends Controller
 
     /**
      * Insert database for expiredCampaigns
-     * Url : /item_ads
+     * Url : /campaigns/expired/create
      */
     public function create(Request $request)
     {
@@ -63,8 +62,8 @@ class ExpiredCampaignController extends Controller
     }
 
     /**
-     * Get one data expiredCampaigns by id
-     * Url : /item_ads/{id}
+     * Get one data from one expired campaign by id
+     * Url : /campaigns/expired/{id}
      */
     public function read(Request $request, $id)
     {
@@ -83,8 +82,8 @@ class ExpiredCampaignController extends Controller
     }
 
     /**
-     * Update data expiredCampaigns by ud
-     * Url : /item_ads/udpate/{id}
+     * Update data for one expired campaigns by id
+     * Url : /campaigns/expired/update/{id}
      */
     public function update(Request $request, $id)
     {
@@ -106,7 +105,8 @@ class ExpiredCampaignController extends Controller
     }
 
     /**
-     * Delete data expiredCampaigns by id
+     * Delete one expired campaigns by id
+     * Url : /campaigns/expired/{id}
      */
     public function delete(Request $request, $id)
     {

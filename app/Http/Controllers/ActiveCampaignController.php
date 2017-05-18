@@ -8,24 +8,16 @@ use App\ActiveCampaigns;
 class ActiveCampaignController extends Controller
 {
 
-    /**
-     * Create a new auth instance.
-     *
-     * @return void
-     */
+    // Create new Auth instance
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    /**
-     * Get all data from item_ads
-     */
-
 
     /**
      * Insert database for activeCampaigns
-     * Url : /item_ads
+     * Url : /campaigns/active/create
      */
     public function create(Request $request)
     {
@@ -47,8 +39,8 @@ class ActiveCampaignController extends Controller
     }
 
     /**
-     * Get one data activeCampaigns by id
-     * Url : /item_ads/{id}
+     * Get one data from one active campaign by id
+     * Url : /campaigns/active/{id}
      */
     public function read(Request $request, $id)
     {
@@ -67,8 +59,8 @@ class ActiveCampaignController extends Controller
     }
 
     /**
-     * Update data activeCampaigns by ud
-     * Url : /item_ads/udpate/{id}
+     * Update data for one active campaign by id
+     * Url : /campaigns/active/update/{id}
      */
     public function update(Request $request, $id)
     {
@@ -90,7 +82,8 @@ class ActiveCampaignController extends Controller
     }
 
     /**
-     * Delete data activeCampaigns by id
+     * Delete one active campaign by id
+     * Url : /campaigns/active/delete/{id}
      */
     public function delete(Request $request, $id)
     {

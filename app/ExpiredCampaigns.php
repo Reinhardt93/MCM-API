@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class ExpiredCampaigns extends Model
 {
+  // Primary key in database
   protected $primaryKey = 'campaignID';
   /**
    * Table database

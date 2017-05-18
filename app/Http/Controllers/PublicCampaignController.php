@@ -8,15 +8,14 @@ use App\ActiveCampaigns;
 class PublicCampaignController extends Controller
 {
 
-    /**
-     * Create a new auth instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
     }
 
+    /**
+     * Get data for all active campaigns
+     * Url : /campaigns/active
+     */
     public function index(Request $request)
     {
       $activeCampaigns = new activeCampaigns;
@@ -35,7 +34,10 @@ class PublicCampaignController extends Controller
     }
 
 
-
+    /**
+     * Get one data from one active campaign by id
+     * Url : /campaigns/active/{id}
+     */
     public function read(Request $request, $id)
     {
       $activeCampaigns = activeCampaigns::find($id)->first();
@@ -52,5 +54,5 @@ class PublicCampaignController extends Controller
       }
     }
 
-    
+
 }

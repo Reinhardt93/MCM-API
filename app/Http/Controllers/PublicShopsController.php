@@ -8,15 +8,15 @@ use App\Shops;
 class PublicShopsController extends Controller
 {
 
-    /**
-     * Create a new auth instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
     }
 
+
+    /**
+     * Get data for all shops
+     * Url : /shops
+     */
     public function index(Request $request)
     {
       $shops = new Shops;
@@ -27,7 +27,10 @@ class PublicShopsController extends Controller
       return response($res);
     }
 
-
+    /**
+     * Get one data from one shop by id
+     * Url : /shop/{id}
+     */
     public function read(Request $request, $shopID)
     {
       $shops = Shops::where('shopID',$shopID)->first();

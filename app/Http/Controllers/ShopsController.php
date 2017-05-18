@@ -33,7 +33,7 @@ class ShopsController extends Controller
 
     /**
      * Insert database for Shops
-     * Url : /shops
+     * Url : /shops/create
      */
     public function create(Request $request)
     {
@@ -69,7 +69,8 @@ class ShopsController extends Controller
     }
 
     /**
-     * Update data CategoryAds by ud
+     * Update one shop by id
+     * Url : /shops/update/{id}
      */
     public function update(Request $request, $shopID)
     {
@@ -92,6 +93,7 @@ class ShopsController extends Controller
 
     /**
      * Delete shops by id
+     * Url : /shops/delete/{id}
      */
     public function delete(Request $request, $shopID)
     {

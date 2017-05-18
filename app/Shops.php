@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Shops extends Model
 {
+  // Primary key in database
   protected $primaryKey = 'shopID';
   /**
    * Table database

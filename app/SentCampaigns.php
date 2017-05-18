@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class SentCampaigns extends Model
 {
+  // Primary key in database
   protected $primaryKey = 'campaignID';
   /**
    * Table database
